@@ -1,0 +1,317 @@
+html {
+  scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* NAVIGATION CSS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  /* Existing background styles */
+  background-image: url(./img/istockphoto-1279902517-2048x2048.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: box 4s ease-in-out infinite;
+}
+.logo img {
+  width: 50px;
+  animation: logo 2s ease-in-out infinite;
+}
+@keyframes logo {
+  0% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+}
+/* Adjustments for Bootstrap Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.27);
+  padding: 20px 0; /* Adjusted padding */
+}
+/* New style for sticky navbar */
+.navbar.sticky-top {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1020; /* Ensure it stays above other content */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px; /* Spacing between links */
+}
+
+.social-links {
+  display: flex;
+  gap: 2em;
+  padding-left: 30px;
+  align-items: center;
+  color: white;
+}
+.social-links p {
+  background-color: orangered;
+  padding: 6px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* .nav-links is now a class on the ul, not needed as display: contents */
+.nav-links .nav-link {
+  color: white;
+  text-decoration: none;
+  transform: scale(1);
+}
+.nav-links .nav-link:hover {
+  color: orangered;
+  transform: scale(1.2, 1.2);
+  transition: 0.8s;
+}
+/* Dropdown specific styling */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for dropdown */
+  border: none;
+}
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.text {
+  text-align: center;
+  padding: 50px 0;
+  color: white;
+}
+@keyframes box {
+  0% {
+    background-image: url(./img/WhatsApp\ Image\ 2025-11-22\ at\ 00.25.01_9bd00fd4.jpg);
+  }
+
+  25% {
+    background-image: url(./img/istockphoto-1279902517-2048x2048.jpg);
+  }
+  50% {
+    background-image: url(./img/WhatsApp\ Image\ 2025-11-22\ at\ 00.25.01_9bd00fd4.jpg);
+  }
+}
+/* BEST PRICES UNDERLINGS - Removed display flex due to Bootstrap Grid */
+.underlings {
+  margin-top: 15px;
+}
+
+/* IMAGES UNDERLINGS (Carousel Adjustments) */
+/* The .images container is removed and replaced by the carousel structure */
+.carousel-img {
+  width: 250px; /* Set a specific width */
+  height: 250px; /* Set a specific height */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-radius: 8px; /* Optional: adds a nice touch */
+}
+/* Hover animations removed to simplify for carousel structure */
+.images h3 {
+  /* This h3 style is now targeting h3 inside the carousel items */
+  animation: img 1s ease-in-out infinite;
+  margin-top: 10px;
+}
+@keyframes img {
+  0% {
+    color: orangered;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: orangered;
+  }
+}
+
+/* ################################# */
+.newarrivals {
+  color: black;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/* Product styling updated for Bootstrap grid */
+.products .col-lg-3,
+.products2 .col-lg-3 {
+  padding: 10px;
+}
+
+/* Product Card Styling and Hover Effect */
+.foldable,
+.dumbell,
+.weight,
+.machine,
+.tread,
+.ellip,
+.skip,
+.hack {
+  border: 1px solid black;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  cursor: pointer;
+  overflow: hidden; /* UPDATED: Ensure zoomed image doesn't bleed out */
+}
+.foldable:hover,
+.dumbell:hover,
+.weight:hover,
+.machine:hover,
+.tread:hover,
+.ellip:hover,
+.skip:hover,
+.hack:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5); /* Glowing shadow */
+}
+
+/* NEW: Smooth transition for product images */
+.products img,
+.products2 img {
+  transition: transform 0.5s ease;
+}
+
+/* NEW: Zoom effect on image when the parent card is hovered */
+.foldable:hover img,
+.dumbell:hover img,
+.weight:hover img,
+.machine:hover img,
+.tread:hover img,
+.ellip:hover img,
+.skip:hover img,
+.hack:hover img {
+  transform: scale(1.5); /* Subtle zoom in */
+}
+
+/* Link inside product card */
+.product-link {
+  display: block;
+  color: black; /* Ensure text remains black */
+}
+.product-link h4,
+.product-link p {
+  background-color: antiquewhite;
+  margin-bottom: 0;
+  padding: 5px 0;
+  color: black; /* Ensure text remains black */
+}
+.product-link:hover {
+  text-decoration: none; /* Remove underline on link hover */
+  color: black;
+}
+
+/* ################################ */
+.honcho {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.962);
+  color: orangered;
+  padding: 70px 0;
+}
+.honcho p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation: img 5s ease-in-out infinite;
+  color: whitesmoke;
+}
+article {
+  background-image: url(./img/gym\ wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 50px;
+  animation: article 5s ease-in-out infinite;
+}
+.trusted {
+  text-align: center;
+}
+/* .reviews display flex removed due to Bootstrap Grid */
+.nani,
+.henry,
+.victor {
+  background-color: rgba(0, 0, 0, 0.305);
+  padding: 20px; /* Increased padding */
+  border-radius: 30px;
+}
+@keyframes article {
+  0% {
+    background-image: url(./img/95.jpg);
+  }
+  25% {
+    background-image: url(./img/gym\ wallpaper.jpg);
+  }
+  75% {
+    background-image: url(./img/95.jpg);
+  }
+}
+/* ############# REVIEWS ###################### */
+main {
+  text-align: center;
+  background-color: black;
+  color: orangered;
+  padding: 4em;
+}
+main p strong {
+  animation: img 5s ease-in-out infinite;
+}
+/* ##############################3############# */
+/* ############## ENDING###################### */
+.ending {
+  padding: 50px;
+  /* Removed display flex due to Bootstrap Grid */
+}
+.ending h3 {
+  animation: logo 4s ease-in-out infinite;
+  color: orangered;
+}
+.qlinks a {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5px; /* Added spacing to links */
+}
+.qlinks a:hover {
+  color: orangered;
+}
+.ending p i {
+  color: orangered;
+  animation: logo 4s ease-in-out infinite;
+}
+
+/* Style for the fixed "Back to Top" button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1000;
+  background-color: orangered !important;
+  border: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s;
+}
+#back-to-top:hover {
+  opacity: 0.8;
+}
+/* ################################# */
+footer {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.358);
+  color: white;
+  text-align: center;
+}
+
+/* Media query to ensure images scale down on smaller screens */
+@media (max-width: 768px) {
+  .carousel-img {
+    width: 150px;
+    height: 150px;
+  }
+}
